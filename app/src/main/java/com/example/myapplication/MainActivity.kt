@@ -1,6 +1,7 @@
 package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setListeners() {
-        binding.button2.setOnClickListener{v -> startActivity(Intent(applicationContext,  MainActivity::class.java))}
+        //binding.button2.setOnClickListener{v -> startActivity(Intent(applicationContext,  MainActivity::class.java))}
+
+        binding.button2.setOnClickListener{View.OnClickListener{
+             fun onClick() {
+                startActivity(Intent(applicationContext, MainActivity::class.java));
+            }
+        }}
     }
 }

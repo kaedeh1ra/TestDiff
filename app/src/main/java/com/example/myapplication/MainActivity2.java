@@ -24,6 +24,14 @@ public class MainActivity2 extends AppCompatActivity {
         setListeners();
     }
     private void setListeners() {
-        binding.button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+        //binding.button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+
+        binding.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
     }
 }
